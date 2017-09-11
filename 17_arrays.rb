@@ -41,13 +41,35 @@ puts fav_food.fetch(0)
 class Item
 
 	def initialize(options={})
-		# Зачем здесь Options я не совсем поняла
-		# Можно ли дать другое yfpdfybt&
+		# Здесь Options не очень здорово выглядит.
+		# Лучше было бы дать более конкретное название, например, product_options
 		@price  = options[:price]
 		@weight  = options[:weight]
+
+		# или просто задать конкретные аргументы
+		# 	def initialize(price, weight)
+		# 	@price  = price
+		# 	@weight  = weight
+
+		# таким образом мы избавляемся от массива, 
+		# и нам не нужны квадратные скобки с вызовом value из массива по rk.xe
+	end
+
 	end
 
 	attr_accessor :price, :weight
+
+	# В данном случае, attr_accessor задает сеттер и геттер
+	# Сеттер можно было бы написать самим следующим образом, чтобы, например, перезадать атриббут
+
+	# def price=(new_price)
+   	# @price = new_price
+	# end
+
+	# Геттер можно было бы написать так
+	# def price
+    # @price
+  	# end
 
 end
 
@@ -63,7 +85,7 @@ class Cart
 	def initialize
 		@items = []
 		# или можно так
-		# @items = array.New
+		# @items = Array.new
 	end
 
 	def add_item(item)

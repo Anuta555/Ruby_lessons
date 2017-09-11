@@ -16,16 +16,30 @@ puts friends.length
 
 class Item
 
-	def initialize(options)
-		# Зачем здесь Options я не совсем поняла
-		# Можно ли дать другое yfpdfybt&
-		@price  = options[:price]
-		@weight  = options[:weight]
+	def initialize(price, weight)
+		@price  = price
+		@weight  = weight
 	end
 
 	attr_accessor :price, :weight
 
 end
+
+=begin
+class Item
+
+  def initialize(options)
+    # Зачем здесь Options я не совсем поняла
+    # Можно ли дать другое yfpdfybt&
+    @price  = options[:price]
+    @weight  = options[:weight]
+  end
+
+  attr_accessor :price, :weight
+
+end
+
+=end 
 
 laptop = Item.new({:price => 3100})
 puts laptop.price

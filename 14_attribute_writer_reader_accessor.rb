@@ -28,6 +28,16 @@ attr_writer
 
 =end
 
+class New
+
+
+def = reader
+method_name
+end
+
+end
+
+
 class Item
 
 	attr_accessor :price, :weight
@@ -39,9 +49,11 @@ class Item
 end
 
 laptop = Item.new
-laptop.price = 2000
+laptop.price = 2000 
 laptop.weight = 3
 
 puts laptop.price
 puts laptop.weight
+
+
 
